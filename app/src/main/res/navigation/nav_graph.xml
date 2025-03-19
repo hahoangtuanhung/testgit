@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/articleListFragment">
+
+    <fragment
+        android:id="@+id/articleListFragment"
+        android:name="com.example.ui.articlelist.ArticleListFragment"
+        tools:layout="@layout/fragment_article_list">
+        <action
+            android:id="@+id/action_articleListToDetail"
+            app:destination="@id/articleDetailFragment">
+            <argument
+                android:name="article"
+                app:argType="com.example.data.model.Article" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/articleDetailFragment"
+        android:name="com.example.ui.articledetail.ArticleDetailFragment"
+        tools:layout="@layout/fragment_article_detail">
+        <argument
+            android:name="article"
+            app:argType="com.example.data.model.Article" />
+    </fragment>
+</navigation>
