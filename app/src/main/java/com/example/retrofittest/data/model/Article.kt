@@ -1,5 +1,6 @@
 package com.example.data.model
 
+import android.R
 import android.os.Parcel
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
@@ -9,7 +10,8 @@ data class Article(
  val id: Int,
  val title: String,
  val content: String,
- val imageUrl: String
+ val imageUrl: String,
+ val abc: String
 ) : Parcelable {
  override fun describeContents(): Int {
   TODO("Not yet implemented")
